@@ -10,7 +10,7 @@ interface HeroSectionProps {
 
 export function HeroSection({ totalListeners }: HeroSectionProps) {
   const scrollToRadios = () => {
-    document.getElementById('radios')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById("radios")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -35,7 +35,6 @@ export function HeroSection({ totalListeners }: HeroSectionProps) {
       </div>
 
       <div className="container mx-auto px-4 text-center relative z-10">
-
         <h1 className="text-4xl md:text-6xl font-bold text-balance mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
           Rede Suzuky SAT
         </h1>
@@ -46,7 +45,11 @@ export function HeroSection({ totalListeners }: HeroSectionProps) {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-          <Button size="lg" className="text-lg px-8 py-6 animate-pulse-music" onClick={scrollToRadios}>
+          <Button
+            size="lg"
+            className="text-lg px-8 py-6 animate-pulse-music"
+            onClick={scrollToRadios}
+          >
             <Play className="mr-2 h-5 w-5" />
             Começar a Ouvir
           </Button>
@@ -59,7 +62,7 @@ export function HeroSection({ totalListeners }: HeroSectionProps) {
           </div>
           <div className="flex items-center gap-2">
             <div className="w-2 h-2 bg-primary rounded-full"></div>
-            <span>12 rádios ativas</span>
+            <span>11 rádios ativas</span>
           </div>
         </div>
       </div>

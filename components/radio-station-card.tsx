@@ -2,7 +2,6 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Play, Pause, Users, Heart, Share2, Volume2, Loader2 } from "lucide-react"
-import Image from "next/image"
 
 interface RadioStation {
   id: number
@@ -53,12 +52,10 @@ export function RadioStationCard({ station, radioPlayer }: RadioStationCardProps
       <CardContent className="p-0">
         {/* Imagem da Rádio */}
         <div className="relative overflow-hidden rounded-t-lg">
-          <Image
+          <img
             src={station.image || "/placeholder.svg"}
             alt={station.name}
-            width={300}
-            height={200}
-            className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+            className="w-full h-48 object-contain bg-gray-50 p-4 group-hover:scale-105 transition-transform duration-300"
           />
           {station.isLive && (
             <Badge className="absolute top-3 left-3 bg-red-500 text-white border-0 animate-pulse">

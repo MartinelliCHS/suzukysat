@@ -10,110 +10,100 @@ const radioStations = [
     name: "Rádio Brega Show",
     genre: "Brega",
     description: "O melhor do brega nacional 24 horas",
-    image: "/brega-show.jpg",
+    image: "/img/bregashow.jpeg",
     listeners: 1250,
     isLive: true,
-    streamUrl: "https://stm1.voxpainel.com.br:9000/stream", // ALTERE AQUI: Coloque a URL real da rádio
+    streamUrl: "https://stm1.voxpainel.com.br:9000/stream",
   },
   {
     id: 2,
     name: "Rádio Serrana AM 590",
     genre: "Diversos",
     description: "A rádio que fala bem de você!",
-    image: "/radio-serrana-am.png",
+    image: "/img/serrana.jpeg",
     listeners: 2100,
     isLive: true,
-    streamUrl: "https://stm1.voxpainel.com.br:8716/stream", // ALTERE AQUI: Coloque a URL real da rádio
+    streamUrl: "https://stm1.voxpainel.com.br:8716/stream",
   },
   {
     id: 3,
     name: "Rádio Suzuky SAT",
     genre: "Diversos",
     description: "A rádio principal da rede de players web",
-    image: "/suzuky-sat.jpg",
+    image: "/img/suzukysat.jpeg",
     listeners: 3500,
     isLive: true,
-    streamUrl: "https://server09.srvsh.com.br:7328/stream", // ALTERE AQUI: Coloque a URL real da rádio
+    streamUrl: "https://server09.srvsh.com.br:7328/stream",
   },
   {
     id: 4,
     name: "Rádio Poesia Verso e Viola",
     genre: "MPB",
     description: "Música popular brasileira e poesia",
-    image: "/poesia-verso-viola.png",
+    image: "/img/poesiaversoeviola.jpeg",
     listeners: 890,
     isLive: true,
-    streamUrl: "https://server22.srvsh.com.br:8502/stream", // ALTERE AQUI: Coloque a URL real da rádio
+    streamUrl: "https://server22.srvsh.com.br:8502/stream",
   },
   {
     id: 5,
     name: "Rádio Comunitária Pedra da Boca",
     genre: "Comunitária",
     description: "A voz da comunidade",
-    image: "/pedra-da-boca.png",
+    image: "/img/pedradaboca.jpeg",
     listeners: 650,
     isLive: true,
-    streamUrl: "https://server20.srvsh.com.br:8454/stream", // ALTERE AQUI: Coloque a URL real da rádio
+    streamUrl: "https://server20.srvsh.com.br:8454/stream",
   },
   {
     id: 6,
     name: "Rádio Exclusivo Sertanejo",
     genre: "Sertanejo",
     description: "Só os maiores sucessos sertanejos",
-    image: "/exclusivo-sertanejo.png",
+    image: "/img/exclusivosertanejo.jpeg",
     listeners: 1800,
     isLive: true,
-    streamUrl: "https://stm1.voxpainel.com.br:8408/stream", // ALTERE AQUI: Coloque a URL real da rádio
+    streamUrl: "https://stm1.voxpainel.com.br:8408/stream",
   },
   {
     id: 7,
     name: "Rádio Forroriando",
     genre: "Forró",
     description: "Forró pé de serra, para você!",
-    image: "/forroriando.png",
+    image: "/img/forroriando.jpeg",
     listeners: 1400,
     isLive: true,
-    streamUrl: "https://stm1.voxpainel.com.br:8014/stream", // ALTERE AQUI: Coloque a URL real da rádio
+    streamUrl: "https://stm1.voxpainel.com.br:8014/stream",
   },
   {
     id: 8,
     name: "Rádio Delícia FM",
     genre: "Romântica",
     description: "As mais belas canções românticas",
-    image: "/delicia-fm.png",
+    image: "/img/deliciafm.jpeg",
     listeners: 1100,
     isLive: true,
-    streamUrl: "https://stm1.voxpainel.com.br:8586/stream", // ALTERE AQUI: Coloque a URL real da rádio
+    streamUrl: "https://stm1.voxpainel.com.br:8586/stream",
   },
   {
     id: 9,
     name: "Rádio Santuário de Fátima",
     genre: "Religiosa",
     description: "Música católica e reflexões",
-    image: "/santuario.png",
+    image: "/img/santuario.jpeg",
     listeners: 750,
     isLive: true,
-    streamUrl: "https://stm1.voxpainel.com.br:8086/stream", // ALTERE AQUI: Coloque a URL real da rádio
+    streamUrl: "https://stm1.voxpainel.com.br:8086/stream",
   },
   {
     id: 10,
     name: "Rádio Breganejo",
     genre: "Brega",
     description: "O melhor do brega e sertanejo",
-    image: "/breganejo.jpeg",
+    image: "/img/breganejo.jpeg",
     listeners: 980,
     isLive: true,
-    streamUrl: "https://stm1.voxpainel.com.br:7518/stream", // ALTERE AQUI: Coloque a URL real da rádio
-  },
-  {
-    id: 11,
-    name: "Rádio Balacobaco",
-    genre: "Eclética",
-    description: "Música de todos os estilos",
-    image: "/balacobaco.jpeg",
-    listeners: 720,
-    isLive: true,
-    streamUrl: "https://stm1.voxpainel.com.br:8024/stream", // ALTERE AQUI: Coloque a URL real da rádio
+    streamUrl: "https://stm1.voxpainel.com.br:7518/stream",
   },
 ];
 
@@ -121,7 +111,7 @@ export default function HomePage() {
   const radioPlayer = useRadioPlayer();
   const totalListeners = radioStations.reduce(
     (sum, station) => sum + station.listeners,
-    0
+    0,
   );
 
   return (
