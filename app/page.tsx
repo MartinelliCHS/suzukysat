@@ -3,6 +3,7 @@
 import { RadioStationCard } from "@/components/radio-station-card";
 import { HeroSection } from "@/components/hero-section";
 import { useRadioPlayer } from "@/hooks/use-radio-player";
+import Image from "next/image";
 
 const radioStations = [
   {
@@ -11,27 +12,27 @@ const radioStations = [
     genre: "Brega",
     description: "O melhor do brega nacional 24 horas",
     image: "/img/bregashow.jpeg",
-    listeners: 1250,
+    listeners: 20257,
     isLive: true,
     streamUrl: "https://stm1.voxpainel.com.br:9000/stream",
   },
   {
     id: 2,
-    name: "Rádio Serrana AM 590",
+    name: "Rádio Serrana FM",
     genre: "Diversos",
     description: "A rádio que fala bem de você!",
     image: "/img/serrana.jpeg",
-    listeners: 2100,
+    listeners: 33042,
     isLive: true,
     streamUrl: "https://stm1.voxpainel.com.br:8716/stream",
   },
   {
     id: 3,
-    name: "Rádio Suzuky SAT",
+    name: "Rádio Suzukysat",
     genre: "Diversos",
     description: "A rádio principal da rede de players web",
     image: "/img/suzukysat.jpeg",
-    listeners: 3500,
+    listeners: 10394,
     isLive: true,
     streamUrl: "https://server09.srvsh.com.br:7328/stream",
   },
@@ -41,7 +42,7 @@ const radioStations = [
     genre: "MPB",
     description: "Música popular brasileira e poesia",
     image: "/img/poesiaversoeviola.jpeg",
-    listeners: 890,
+    listeners: 19673,
     isLive: true,
     streamUrl: "https://server22.srvsh.com.br:8502/stream",
   },
@@ -51,7 +52,7 @@ const radioStations = [
     genre: "Comunitária",
     description: "A voz da comunidade",
     image: "/img/pedradaboca.jpeg",
-    listeners: 650,
+    listeners: 17326,
     isLive: true,
     streamUrl: "https://server20.srvsh.com.br:8454/stream",
   },
@@ -61,7 +62,7 @@ const radioStations = [
     genre: "Sertanejo",
     description: "Só os maiores sucessos sertanejos",
     image: "/img/exclusivosertanejo.jpeg",
-    listeners: 1800,
+    listeners: 14654,
     isLive: true,
     streamUrl: "https://stm1.voxpainel.com.br:8408/stream",
   },
@@ -71,7 +72,7 @@ const radioStations = [
     genre: "Forró",
     description: "Forró pé de serra, para você!",
     image: "/img/forroriando.jpeg",
-    listeners: 1400,
+    listeners: 13321,
     isLive: true,
     streamUrl: "https://stm1.voxpainel.com.br:8014/stream",
   },
@@ -81,7 +82,7 @@ const radioStations = [
     genre: "Romântica",
     description: "As mais belas canções românticas",
     image: "/img/deliciafm.jpeg",
-    listeners: 1100,
+    listeners: 12324,
     isLive: true,
     streamUrl: "https://stm1.voxpainel.com.br:8586/stream",
   },
@@ -91,7 +92,7 @@ const radioStations = [
     genre: "Religiosa",
     description: "Música católica e reflexões",
     image: "/img/santuario.jpeg",
-    listeners: 750,
+    listeners: 15836,
     isLive: true,
     streamUrl: "https://stm1.voxpainel.com.br:8086/stream",
   },
@@ -101,9 +102,29 @@ const radioStations = [
     genre: "Brega",
     description: "O melhor do brega e sertanejo",
     image: "/img/breganejo.jpeg",
-    listeners: 980,
+    listeners: 10349,
     isLive: true,
     streamUrl: "https://stm1.voxpainel.com.br:7518/stream",
+  },
+  {
+    id: 11,
+    name: "Araruna FM",
+    genre: "Diversos",
+    description: "Todos os ritmos em uma só rádio",
+    image: "/img/ararunafm.jpeg",
+    listeners: 18334,
+    isLive: true,
+    streamUrl: "https://server07.srvsh.com.br:8062/stream",
+  },
+  {
+    id: 12,
+    name: "FM Brega Show Manaus",
+    genre: "Brega",
+    description: "Aqui só toca bregão",
+    image: "/img/bregashowmanaus.jpeg",
+    listeners: 18334,
+    isLive: true,
+    streamUrl: "https://stm1.voxpainel.com.br:8456/stream",
   },
 ];
 
@@ -116,46 +137,14 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-background">
-      <HeroSection totalListeners={totalListeners} />
-
-      {/* Seção de Estatísticas */}
-      <section className="py-12 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center justify-items-center">
-            <div className="space-y-2">
-              <div className="text-3xl font-bold text-primary">
-                {radioStations.length}
-              </div>
-              <div className="text-muted-foreground">Rádios Ativas</div>
-            </div>
-            <div className="space-y-2">
-              <div className="text-3xl font-bold text-primary">
-                {totalListeners.toLocaleString()}
-              </div>
-              <div className="text-muted-foreground">Ouvintes Online</div>
-            </div>
-            <div className="space-y-2">
-              <div className="text-3xl font-bold text-primary">100%</div>
-              <div className="text-muted-foreground">Gratuito</div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroSection
+        totalListeners={totalListeners}
+        totalStations={radioStations.length}
+      />
 
       {/* Seção Principal das Rádios */}
       <section id="radios" className="py-16">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-balance mb-4">
-              Nossas Estações de Rádio
-            </h2>
-            <p className="text-lg text-muted-foreground text-pretty max-w-2xl mx-auto">
-              Descubra a diversidade musical brasileira com nossas rádios
-              especializadas. Do sertanejo ao brega, do forró à MPB, temos o som
-              perfeito para você.
-            </p>
-          </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {radioStations.map((station) => (
               <RadioStationCard
@@ -193,8 +182,72 @@ export default function HomePage() {
             <div>
               <h4 className="font-semibold mb-4">Contato</h4>
               <div className="space-y-2 text-primary-foreground/80">
-                <p>📧 suzukysat@gmail.com</p>
-                <p>📱 WhatsApp: (83) 9 9802-3138</p>
+                <div className="flex items-center gap-2">
+                  <a
+                    href="mailto:suzukysat@gmail.com?subject=Vim%20pelo%20site%20Rede%20Suzukysat"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+                  >
+                    <Image
+                      src="/img/e-mail.png"
+                      alt="Email"
+                      width={20}
+                      height={20}
+                    />
+                    Email
+                  </a>
+                </div>
+                <div className="flex items-center gap-2">
+                  <a
+                    href="https://wa.me/5583998023138?text=Ol%C3%A1!%20vim%20pelo%20site%2C%20gostaria%20de%20saber%20mais%20sobre%20a%20rede%20de%20r%C3%A1dios..."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+                  >
+                    <Image
+                      src="/img/whatsapplogo.png"
+                      alt="WhatsApp"
+                      width={20}
+                      height={20}
+                    />
+                    WhatsApp
+                  </a>
+                </div>
+
+                <div className="flex items-center gap-2">
+                  <a
+                    href="https://www.facebook.com/carlos.suzuky"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+                  >
+                    <Image
+                      src="/img/facebook.png"
+                      alt="Facebook"
+                      width={20}
+                      height={20}
+                    />
+                    Facebook
+                  </a>
+                </div>
+
+                <div className="flex items-center gap-2">
+                  <a
+                    href="https://www.instagram.com/carlossuzuky?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+                  >
+                    <Image
+                      src="/img/instagram.png"
+                      alt="Instagram"
+                      width={20}
+                      height={20}
+                    />
+                    Instagram
+                  </a>
+                </div>
               </div>
             </div>
           </div>
