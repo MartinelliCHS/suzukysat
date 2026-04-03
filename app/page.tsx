@@ -162,7 +162,9 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="flex justify-center items-center gap-8 flex-wrap">
             <div className="text-center">
-              <h3 className="text-xl font-bold mb-4 text-primary">Acesse e se inscreva no nosso canal TV SUZUKYSAT!</h3>
+              <h3 className="text-xl font-bold mb-4 text-primary">
+                Acesse e se inscreva no nosso canal TV SUZUKYSAT!
+              </h3>
               <a
                 href="https://www.youtube.com/@tvsuzukysat"
                 target="_blank"
@@ -183,7 +185,9 @@ export default function HomePage() {
               </a>
             </div>
             <div className="text-center">
-              <h3 className="text-xl font-bold mb-4 text-primary">Acesse e se inscreva no nosso canal TV BREGA SHOW!</h3>
+              <h3 className="text-xl font-bold mb-4 text-primary">
+                Acesse e se inscreva no nosso canal TV BREGA SHOW!
+              </h3>
               <a
                 href="https://www.youtube.com/@tvbregashow"
                 target="_blank"
@@ -215,7 +219,7 @@ export default function HomePage() {
               <h3 className="text-xl font-bold mb-4">Rede Suzukysat</h3>
               <p className="text-primary-foreground/80">
                 A melhor rede de rádios web do Brasil, levando música de
-                qualidade para todos os cantos do país.
+                qualidade para o mundo todo.
               </p>
             </div>
             <div>
