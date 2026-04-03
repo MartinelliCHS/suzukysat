@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { YouTubeLivePlayerFinal } from "./youtube-live-player-final";
+import { YouTubeLivePlayerSimple } from "./youtube-live-player-simple";
 import { YOUTUBE_CONFIG } from "../lib/youtube-config";
 
 interface HeroSectionProps {
@@ -27,7 +27,7 @@ export function HeroSection({
         </div>
         
         {/* YouTube Live Player */}
-        <YouTubeLivePlayerFinal 
+        <YouTubeLivePlayerSimple 
           channelId={YOUTUBE_CONFIG.CHANNEL_ID}
         />
         
