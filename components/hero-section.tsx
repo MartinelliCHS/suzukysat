@@ -25,15 +25,12 @@ export function HeroSection({
             className="mx-auto"
           />
         </div>
-        
+
         {/* YouTube Live Player */}
-        <YouTubeLivePlayerSimple 
-          channelId={YOUTUBE_CONFIG.CHANNEL_ID}
-        />
-        
-        <p className="text-xl md:text-2xl text-muted-foreground mb-0 max-w-3xl mx-auto">
-          Conectando corações através da música brasileira. Ouça suas RÁDIOS
-          favoritas com qualidade digital e sem interrupções.
+        <YouTubeLivePlayerSimple channelId={YOUTUBE_CONFIG.CHANNEL_ID} />
+
+        <p className="text-lg md:text-xl text-muted-foreground mb-0 max-w-3xl mx-auto">
+          Ouça suas RÁDIOS favoritas com qualidade digital e sem interrupções.
         </p>
       </div>
     </section>
