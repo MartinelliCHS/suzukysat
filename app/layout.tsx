@@ -7,7 +7,7 @@ import { Suspense } from "react"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "Rede Suzuky SAT - A Melhor Rede de Rádios Web",
+  title: "Rede Suzukysat - A Melhor Rede de Rádios Web",
   description: "Ouça as melhores rádios web do Brasil com sertanejo, brega, forró e muito mais!",
   generator: "v0.app",
 }

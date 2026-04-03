@@ -48,7 +48,7 @@ const radioStations = [
   },
   {
     id: 5,
-    name: "Rádio Comunitária Pedra da Boca",
+    name: "Rádio Pedra da Boca FM",
     genre: "Comunitária",
     description: "A voz da comunidade",
     image: "/img/pedradaboca.jpeg",
@@ -108,7 +108,7 @@ const radioStations = [
   },
   {
     id: 11,
-    name: "Araruna FM",
+    name: "Rádio Araruna FM",
     genre: "Diversos",
     description: "Todos os ritmos em uma só rádio",
     image: "/img/ararunafm.jpeg",
@@ -118,7 +118,7 @@ const radioStations = [
   },
   {
     id: 12,
-    name: "FM Brega Show Manaus",
+    name: "Rádio FM Brega Show",
     genre: "Brega",
     description: "Aqui só toca bregão",
     image: "/img/bregashowmanaus.jpeg",
@@ -157,12 +157,54 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Seção de Imagens */}
+      <section className="py-8 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="flex justify-center items-center gap-8 flex-wrap">
+            <div className="text-center">
+              <h3 className="text-xl font-bold mb-4 text-primary">Acesse e se inscreva no nosso canal TV SUZUKYSAT!</h3>
+              <a
+                href="https://www.youtube.com/@tvsuzukysat"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block hover:opacity-80 transition-opacity"
+              >
+                <Image
+                  src="/img/suzukytvfoto.jpeg"
+                  alt="Suzuky TV"
+                  width={700}
+                  height={200}
+                  className="rounded-lg shadow-lg object-cover"
+                />
+              </a>
+            </div>
+            <div className="text-center">
+              <h3 className="text-xl font-bold mb-4 text-primary">Acesse e se inscreva no nosso canal TV BREGA SHOW!</h3>
+              <a
+                href="https://www.youtube.com/@tvbregashow"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block hover:opacity-80 transition-opacity"
+              >
+                <Image
+                  src="/img/bregashowtvfoto.jpeg"
+                  alt="Brega Show TV"
+                  width={700}
+                  height={200}
+                  className="rounded-lg shadow-lg object-cover"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="bg-primary text-primary-foreground py-12">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
-              <h3 className="text-xl font-bold mb-4">Rede Suzuky SAT</h3>
+              <h3 className="text-xl font-bold mb-4">Rede Suzukysat</h3>
               <p className="text-primary-foreground/80">
                 A melhor rede de rádios web do Brasil, levando música de
                 qualidade para todos os cantos do país.
@@ -252,7 +294,7 @@ export default function HomePage() {
             </div>
           </div>
           <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center text-primary-foreground/60">
-            <p>&copy; 2024 Rede Suzuky SAT. Todos os direitos reservados.</p>
+            <p>&copy; 2024 Rede Suzukysat. Todos os direitos reservados.</p>
           </div>
         </div>
       </footer>
