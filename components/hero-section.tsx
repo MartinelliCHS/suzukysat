@@ -24,7 +24,7 @@ export function HeroSection({
           />
         </div>
         <p className="text-xl md:text-2xl text-muted-foreground mb-0 max-w-3xl mx-auto">
-          Conectando corações através da música brasileira. Ouça suas rádios
+          Conectando corações através da música brasileira. Ouça suas RÁDIOS
           favoritas com qualidade digital e sem interrupções.
         </p>
       </div>
