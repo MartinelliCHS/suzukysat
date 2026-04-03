@@ -12,7 +12,7 @@ const radioStations = [
     genre: "Brega",
     description: "O melhor do brega nacional 24 horas",
     image: "/img/bregashow.jpeg",
-    listeners: 20257,
+    listeners: 47456,
     isLive: true,
     streamUrl: "https://stm1.voxpainel.com.br:9000/stream",
   },
@@ -117,14 +117,14 @@ const radioStations = [
     streamUrl: "https://server07.srvsh.com.br:8062/stream",
   },
   {
-    id: 12,
-    name: "Rádio FM Brega Show",
-    genre: "Brega",
-    description: "Aqui só toca bregão",
-    image: "/img/bregashowmanaus.jpeg",
-    listeners: 18334,
+    id: 13,
+    name: "Rádio Balacobaco",
+    genre: "MPB",
+    description: "MPB e Comédia",
+    image: "/img/balacobaco.jpeg",
+    listeners: 19213,
     isLive: true,
-    streamUrl: "https://stm1.voxpainel.com.br:8456/stream",
+    streamUrl: "https://stm1.voxpainel.com.br:8024/stream",
   },
 ];
 
@@ -163,7 +163,7 @@ export default function HomePage() {
           <div className="flex justify-center items-center gap-8 flex-wrap">
             <div className="text-center">
               <h3 className="text-xl font-bold mb-4 text-primary">
-                Acesse e se inscreva no nosso canal TV SUZUKYSAT!
+                CLIQUE NA IMAGEM e Assista TV SUZUKYSAT
               </h3>
               <a
                 href="https://www.youtube.com/@tvsuzukysat"
@@ -186,7 +186,7 @@ export default function HomePage() {
             </div>
             <div className="text-center">
               <h3 className="text-xl font-bold mb-4 text-primary">
-                Acesse e se inscreva no nosso canal TV BREGA SHOW!
+                CLIQUE NA IMAGEM e Assista TV BREGA SHOW
               </h3>
               <a
                 href="https://www.youtube.com/@tvbregashow"
@@ -218,8 +218,8 @@ export default function HomePage() {
             <div>
               <h3 className="text-xl font-bold mb-4">Rede Suzukysat</h3>
               <p className="text-primary-foreground/80">
-                A melhor Rede de Rádios e TV's Web do Brasil, levando música e entretenimento de
-                qualidade para o Mundo todo.
+                A melhor Rede de Rádios e TV's Web do Brasil, levando música e
+                entretenimento de qualidade para o Mundo todo.
               </p>
             </div>
             <div>
