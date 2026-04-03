@@ -218,8 +218,8 @@ export default function HomePage() {
             <div>
               <h3 className="text-xl font-bold mb-4">Rede Suzukysat</h3>
               <p className="text-primary-foreground/80">
-                A melhor rede de rádios web do Brasil, levando música de
-                qualidade para o mundo todo.
+                A melhor Rede de Rádios e Tv Web do Brasil, levando música e entretenimento de
+                qualidade para o Mundo todo.
               </p>
             </div>
             <div>
