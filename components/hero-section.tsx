@@ -30,7 +30,7 @@ export function HeroSection({
         <YouTubeLivePlayerSimple channelId={YOUTUBE_CONFIG.CHANNEL_ID} />
 
         <p className="text-lg md:text-xl text-muted-foreground mb-0 max-w-3xl mx-auto">
-          Ouça suas RÁDIOS favoritas com qualidade digital e sem interrupções.
+          Ouça suas RÁDIOS favoritas!
         </p>
       </div>
     </section>
