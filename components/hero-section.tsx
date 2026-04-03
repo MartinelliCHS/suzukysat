@@ -1,6 +1,8 @@
 "use client";
 
 import Image from "next/image";
+import { YouTubeLivePlayerFinal } from "./youtube-live-player-final";
+import { YOUTUBE_CONFIG } from "../lib/youtube-config";
 
 interface HeroSectionProps {
   totalListeners: number;
@@ -18,11 +20,17 @@ export function HeroSection({
           <Image
             src="/img/suzukysatlogo.png"
             alt="Suzukysat Logo"
-            width={600}
-            height={200}
+            width={250}
+            height={60}
             className="mx-auto"
           />
         </div>
+        
+        {/* YouTube Live Player */}
+        <YouTubeLivePlayerFinal 
+          channelId={YOUTUBE_CONFIG.CHANNEL_ID}
+        />
+        
         <p className="text-xl md:text-2xl text-muted-foreground mb-0 max-w-3xl mx-auto">
           Conectando corações através da música brasileira. Ouça suas RÁDIOS
           favoritas com qualidade digital e sem interrupções.
