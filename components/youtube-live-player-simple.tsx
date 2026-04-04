@@ -6,7 +6,9 @@ interface YouTubeLivePlayerSimpleProps {
   channelId: string;
 }
 
-export function YouTubeLivePlayerSimple({ channelId }: YouTubeLivePlayerSimpleProps) {
+export function YouTubeLivePlayerSimple({
+  channelId,
+}: YouTubeLivePlayerSimpleProps) {
   // URL que sabemos que funciona (Método 3)
   const embedUrl = `https://www.youtube.com/embed/videoseries?list=UU${channelId.substring(2)}&autoplay=0&controls=1&rel=0`;
 
@@ -23,26 +25,27 @@ export function YouTubeLivePlayerSimple({ channelId }: YouTubeLivePlayerSimplePr
           allowFullScreen
         />
       </div>
-      
+
       {/* Link para YouTube */}
       <div className="text-center">
-        <a 
-          href="https://www.youtube.com/@tvsuzukysat/live" 
-          target="_blank" 
+        <a
+          href="https://www.youtube.com/@tvsuzukysat/live"
+          target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center px-4 py-2 text-sm text-red-600 hover:text-red-700 font-medium transition-colors border border-red-600 hover:border-red-700 rounded-lg"
         >
           <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
           </svg>
           Ver no YouTube
         </a>
       </div>
-      
+
       {/* Informação */}
-      <div className="text-center mt-4">
+      <div className="text-center mt-2">
         <p className="text-sm text-muted-foreground">
-          📺 <strong>TV Suzukysat</strong> - Quando estivermos ao vivo, a transmissão aparecerá automaticamente
+          📺 <strong>TV Suzukysat</strong> - Quando estivermos ao vivo, a
+          transmissão aparecerá automaticamente
         </p>
       </div>
     </div>
